@@ -27,10 +27,6 @@ vim.keymap.set('n', '<C-l>', '<C-w>l')
 vim.keymap.set('n', '<C-j>', '<C-w>j')
 vim.keymap.set('n', '<C-k>', '<C-w>k')
 
---camelCaseMotionSettings
-vim.g.wordmotion_prefix = ","
-
-
 if not vim.g.vscode then
 	--delete word ctrl+backspace
     vim.keymap.set('i', '<C-BS>', '<C-w>')

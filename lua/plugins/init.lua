@@ -130,6 +130,11 @@ require("lazy").setup({
         require('leap').add_default_mappings()
     end
   },
+  {"ggandor/leap-spooky.nvim",
+    config = function()
+        require('leap-spooky').setup()
+    end
+  },
   {
     "phaazon/hop.nvim",
     branch = "v2",
@@ -149,8 +154,9 @@ require("lazy").setup({
     end
   },
   {'chaoren/vim-wordmotion',
-	lazy = false,
-    priority = 1000,
+    init = function()
+		vim.g.wordmotion_prefix = ","
+    end
   },
   {'tpope/vim-repeat'},
   {'windwp/nvim-autopairs',
